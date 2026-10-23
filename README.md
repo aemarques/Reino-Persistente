@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Reino Persistente — protótipo web
 
 Protótipo inicial de um jogo de administração de recursos e caça automática, inspirado em conceitos de sandbox e progressão, com identidade própria.
@@ -61,3 +62,7 @@ reino_persistente/
     ├── style.css
     └── app.js
 ```
+=======
+# Reino-Persistente
+Projeto de jogo de página http
+>>>>>>> 533e978146de79f69403ad404f9c747043a3fe89
