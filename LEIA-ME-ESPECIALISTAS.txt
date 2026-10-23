@@ -1,0 +1,30 @@
+REINO PERSISTENTE — TAVERNA COM ROTAÇÃO E NÍVEIS DE ESPECIALIZAÇÃO
+
+O QUE MUDOU
+- A lista da Taverna é renovada automaticamente a cada 30 minutos, em ciclos fixos.
+- As ofertas incluem trabalhadores com nomes diferentes em cada rotação.
+- Cada oferta tem um dos quatro níveis: Básico (1x), Intermediário (2x), Avançado (3x) ou Expert (4x).
+- Os bônus de velocidade e qualidade crescem conforme o nível: 1x, 2x, 3x e 4x. O bônus de velocidade tem teto de 70% e o de qualidade, teto de +60 para respeitar a escala de qualidade do recurso.
+- O custo cresce exponencialmente conforme a raridade: Básico 1x, Intermediário 4x, Avançado 16x e Expert 64x sobre o custo-base da profissão.
+- A interface mostra o tempo até a próxima rotação, o nível, os bônus e o custo antes de contratar.
+- O trabalhador contratado e seu nível ficam salvos no banco. A troca da lista não remove os contratados.
+- O banco antigo é migrado automaticamente, sem apagar os recursos, construções, filas ou progresso existentes.
+
+INSTALAÇÃO
+1. Feche o jogo e a janela do servidor/terminal.
+2. Faça uma cópia de segurança da pasta do jogo, principalmente do arquivo game.db.
+3. Extraia o conteúdo deste ZIP para a pasta do projeto, substituindo os arquivos quando solicitado.
+4. NÃO apague nem substitua o arquivo game.db existente.
+5. Inicie o jogo pelo run.bat como fazia antes.
+6. Abra/atualize http://127.0.0.1:5000 no navegador.
+
+NOTAS
+- A renovação ocorre em ciclos fixos de 30 minutos; não depende de ficar com a página aberta.
+- O navegador consulta o servidor a cada 5 segundos e atualiza o contador/ofertas.
+- Cada profissão continua tendo um único espaço de especialista contratado nesta versão. A rotação muda as ofertas disponíveis para as profissões ainda sem especialista.
+- Os retratos ilustrados aparecem na taverna e, após a contratação, no canto superior direito de cada caixa de recurso atendida pela profissão (por exemplo, o minerador aparece em Pedra e Minério).
+
+VALIDAÇÃO
+- A sintaxe do Python e do JavaScript foi verificada.
+- O ZIP inclui os quatro retratos ilustrados em static/portraits/.
+- O teste integrado do servidor deve ser feito no computador local com o Flask instalado.

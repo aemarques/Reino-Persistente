@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reino Persistente — Crônicas da Fronteira</title>
+  <link rel="stylesheet" href="/static/style.css?v=4">
+</head>
+<body>
+  <div class="backdrop"></div>
+
+  <header class="topbar">
+    <div class="crest">✦</div>
+
+    <div class="brand">
+      <div class="eyebrow">CRÔNICAS DA FRONTEIRA</div>
+      <h1>Reino Persistente</h1>
+    </div>
+
+    <div class="header-resource-bar" id="header-resources"
+         aria-label="Recursos disponíveis" aria-live="polite">
+      <span class="header-resource-loading">Carregando recursos…</span>
+    </div>
+
+    <div class="world-status">
+      <span class="live-dot"></span>
+      Mundo local de teste
+    </div>
+  </header>
+
+  <main>
+    <section class="hero panel">
+      <div class="hero-copy">
+        <div class="eyebrow">ANO I · PRIMAVERA</div>
+        <h2>Uma propriedade. Um mundo. Uma longa jornada.</h2>
+        <p>Administre recursos, construa oficinas e prepare expedições. O tempo continua avançando enquanto você estiver ausente.</p>
+      </div>
+      <div class="hero-mark">⚜</div>
+    </section>
+
+    <!-- Painéis originais de recursos mantidos para preservar coleta,
+         qualidade, quantidade, especialistas e retratos. -->
+    <section class="stats-grid" id="resources"></section>
+
+    <section class="panel tavern-panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">RECRUTAMENTO</div>
+          <h2>A taverna dos especialistas</h2>
+        </div>
+        <span class="ornament">✧ ─ ✧</span>
+      </div>
+
+      <p class="muted">As ofertas mudam a cada 30 minutos. Cada trabalhador possui uma especialização — Básico, Intermediário, Avançado ou Expert — que multiplica seus bônus e o custo de contratação. Quando contratado, o retrato do trabalhador aparece no canto superior direito dos recursos da sua profissão.</p>
+
+      <div id="tavern-rotation-timer" class="tavern-rotation-timer">
+        Carregando próxima renovação…
+      </div>
+
+      <div class="specialist-level-legend">
+        <span class="level-1">Básico · bônus 1x / custo 1x</span>
+        <span class="level-2">Intermediário · bônus 2x / custo 4x</span>
+        <span class="level-3">Avançado · bônus 3x / custo 16x</span>
+        <span class="level-4">Expert · bônus 4x / custo 64x</span>
+      </div>
+
+      <div id="tavern-specialists" class="specialist-grid"></div>
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">DOMÍNIO</div>
+            <h2>Sua propriedade</h2>
+          </div>
+          <span class="ornament">✧ ─ ✧</span>
+        </div>
+
+        <p class="muted">Reúna materiais para ampliar sua capacidade produtiva.</p>
+        <div class="action-grid" id="gather-actions"></div>
+
+        <div class="section-head subhead">
+          <h3>Construções</h3>
+        </div>
+        <div id="buildings" class="cards"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">OFÍCIOS</div>
+            <h2>Filas de produção</h2>
+          </div>
+          <span class="ornament">✧ ─ ✧</span>
+        </div>
+
+        <p class="muted">O trabalho é concluído pelo servidor mesmo com esta página fechada.</p>
+        <div id="production" class="cards"></div>
+
+        <div class="section-head subhead">
+          <h3>Trabalhos em andamento</h3>
+        </div>
+        <div id="jobs" class="list"></div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">FRONTEIRAS SELVAGENS</div>
+          <h2>Áreas de caça</h2>
+        </div>
+        <span class="ornament">✧ ─ ✧</span>
+      </div>
+
+      <p class="muted">Escolha a região e envie seu personagem. O combate acontece automaticamente. A derrota não remove itens nem habilidades.</p>
+      <div id="hunting" class="hunt-grid"></div>
+      <div id="expeditions" class="list"></div>
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">PERSONAGEM</div>
+            <h2>Especialização</h2>
+          </div>
+        </div>
+        <div id="character"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">ANAIS DO REINO</div>
+            <h2>Registro de eventos</h2>
+          </div>
+        </div>
+        <div id="events" class="events"></div>
+      </section>
+    </div>
+
+    <footer>Protótipo de desenvolvimento · Os valores de produção e combate são provisórios.</footer>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/app.js?v=4"></script>
+</body>
+</html>

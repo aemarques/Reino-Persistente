@@ -1,0 +1,35 @@
+REINO PERSISTENTE — ACABAMENTO VISUAL V2
+
+O QUE FOI REFINADO
+- Interface unificada para recursos, construções, produção, caça, personagem e histórico.
+- Cartões com bordas, fundos, espaçamentos e tipografia consistentes.
+- Menus de qualidade e quantidade com cores compatíveis com o tema escuro.
+- Informações de quantidade, custos, tempo e XP distribuídas em blocos mais legíveis.
+- Cartões de caça alinhados e botões posicionados de forma consistente.
+- Filas de trabalho, expedições e eventos com melhor leitura.
+- Ajustes para telas menores e foco visível ao navegar pelo teclado.
+- Mantidas as funções de revisar/confirmar pedidos de coleta e cancelar grupos ou todos os pedidos.
+
+ARQUIVOS INCLUÍDOS
+- app.py
+- templates/index.html
+- static/app.js
+- static/style.css
+
+INSTALAÇÃO NO WINDOWS
+1. Feche a página do jogo e pare o servidor no terminal com Ctrl+C.
+2. Faça uma cópia de segurança dos arquivos atuais app.py, templates\index.html, static\app.js e static\style.css.
+3. Extraia este ZIP.
+4. Copie os arquivos para as mesmas pastas do seu projeto, substituindo os arquivos correspondentes.
+5. NÃO apague nem substitua game.db; ele contém o progresso salvo.
+6. Inicie o jogo novamente pelo run.bat.
+7. No navegador, atualize com Ctrl+F5 para carregar o CSS atualizado.
+
+IMPORTANTE
+O pacote inclui templates\index.html porque o Flask procura a página inicial nessa pasta. Se o seu projeto já tiver esse arquivo, mantenha uma cópia de segurança antes de substituir.
+
+VALIDAÇÃO
+A sintaxe do Python foi verificada com py_compile e a do JavaScript com node --check. Não foi possível executar um teste integrado do Flask neste ambiente porque a biblioteca Flask não está instalada aqui; por isso, teste a abertura do jogo no seu Windows após substituir os arquivos.
+
+O BANCO DE DADOS
+O arquivo game.db não está incluído neste pacote e não deve ser substituído. Assim, o pacote não altera diretamente o progresso salvo.
